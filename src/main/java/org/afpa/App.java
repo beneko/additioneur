@@ -19,7 +19,9 @@ public class App extends Application {
 
         Parent root= FXMLLoader.load((Objects.requireNonNull(getClass().getResource("form.fxml"))));
         Scene scene = new Scene(root);
+        primaryStage.setResizable(false);
         primaryStage.setScene(scene);
         primaryStage.show();
+
     }
 }
