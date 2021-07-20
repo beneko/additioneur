@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TitledPane?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<VBox xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.afpa.controller.FormController">
+   <children>
+      <TitledPane animated="false" prefHeight="488.0" prefWidth="412.0" text="Additioneur">
+         <font>
+            <Font size="16.0" />
+         </font>
+         <content>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="437.0" prefWidth="390.0">
+               <children>
+                  <TextArea layoutX="22.0" layoutY="14.0" prefHeight="200.0" prefWidth="366.0" />
+                  <Button fx:id="zero" layoutX="25.0" layoutY="233.0" mnemonicParsing="false" onAction="#addNum" text="0">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="one" layoutX="99.0" layoutY="233.0" mnemonicParsing="false" onAction="#addNum" text="1">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="two" layoutX="176.0" layoutY="233.0" mnemonicParsing="false" onAction="#addNum" text="2">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="three" layoutX="252.0" layoutY="233.0" mnemonicParsing="false" onAction="#addNum" text="3">
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="four" layoutX="325.0" layoutY="233.0" mnemonicParsing="false" onAction="#addNum" text="4">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="eight" layoutX="253.0" layoutY="308.0" mnemonicParsing="false" onAction="#addNum" text="8">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                     </opaqueInsets>
+                  </Button>
+                  <Button fx:id="seven" layoutX="177.0" layoutY="308.0" mnemonicParsing="false" onAction="#addNum" text="7">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="six" layoutX="100.0" layoutY="308.0" mnemonicParsing="false" onAction="#addNum" text="6">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="five" layoutX="26.0" layoutY="308.0" mnemonicParsing="false" onAction="#addNum" text="5">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="nine" layoutX="326.0" layoutY="308.0" mnemonicParsing="false" onAction="#addNum" text="9">
+                     <font>
+                        <Font size="20.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="vider" layoutX="70.0" layoutY="381.0" mnemonicParsing="false" onAction="#vider" text="Vider">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="calculer" layoutX="233.0" layoutY="381.0" mnemonicParsing="false" onAction="#calculer" text="Calculer">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                     <padding>
+                        <Insets bottom="5.0" left="30.0" right="30.0" top="5.0" />
+                     </padding>
+                  </Button>
+               </children>
+            </AnchorPane>
+         </content>
+      </TitledPane>
+   </children>
+</VBox>
