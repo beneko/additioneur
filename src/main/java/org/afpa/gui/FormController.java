@@ -1,7 +1,10 @@
-package org.afpa.controller;
+package org.afpa.gui;
 
 import javafx.event.ActionEvent;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
+
+import java.util.ArrayList;
 
 public class FormController {
 
@@ -17,15 +20,32 @@ public class FormController {
     public Button nine;
     public Button vider;
     public Button calculer;
+    public TextArea ecran;
+    private final ArrayList<Integer> numList = new ArrayList<>();
 
-//    public void calculer(ActionEvent actionEvent) {
-//    }
-//
-//    public void vider(ActionEvent actionEvent) {
-//    }
+    public void add(ActionEvent actionEvent) {
+        Button btn = (Button) actionEvent.getSource();
+        String strBtn = btn.getText();
 
-    public void addNum(ActionEvent actionEvent) {
-        Button num = (Button) actionEvent.getSource();
-        System.out.println(num);
+
+        switch (strBtn){
+            case  "0","1","2","3","4","5","6","7","8","9"->{
+                ecran.appendText("+"+strBtn);
+                numList.add(Integer.valueOf(strBtn));
+//                System.out.println(numList);
+            }
+            case "Calculer" ->{
+                Integer sum = 0;
+                for (Integer i: numList) {
+                    sum += i ;
+                }
+                ecran.setText(String.valueOf(sum));
+            }
+            case "Vider" ->{
+                ecran.clear();
+                numList.clear();
+            }
+            default -> ecran.setText("Error");
+        }
     }
 }

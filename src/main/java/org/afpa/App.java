@@ -1,11 +1,12 @@
 package org.afpa;
 
 import javafx.application.Application;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
+import java.io.IOException;
+import java.util.Objects;
 
 public class App extends Application {
 
@@ -14,16 +15,9 @@ public class App extends Application {
     }
 
     @Override
-    public void start(Stage primaryStage) {
-        Label label = new Label("Hello");
-        Button button = new Button("Add");
-        button.setOnAction(event -> {
-            label.setText("Hello worl!");
-        });
-        VBox root = new VBox();
+    public void start(Stage primaryStage) throws IOException {
 
-        root.getChildren().add(label);
-        root.getChildren().add(button);
+        Parent root= FXMLLoader.load((Objects.requireNonNull(getClass().getResource("form.fxml"))));
         Scene scene = new Scene(root);
         primaryStage.setScene(scene);
         primaryStage.show();
